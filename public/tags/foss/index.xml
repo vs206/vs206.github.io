@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Foss on vs206</title>
+    <link>http://localhost:1313/tags/foss/</link>
+    <description>Recent content in Foss on vs206</description>
+    <image>
+      <title>vs206</title>
+      <url>http://localhost:1313/images/logo.jpg</url>
+      <link>http://localhost:1313/images/logo.jpg</link>
+    </image>
+    <generator>Hugo -- 0.125.7</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 29 Jun 2023 15:37:27 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/foss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stuff/Resources I use</title>
+      <link>http://localhost:1313/blog/stuff-i-use/</link>
+      <pubDate>Thu, 29 Jun 2023 15:37:27 +0530</pubDate>
+      <guid>http://localhost:1313/blog/stuff-i-use/</guid>
+      <description>So this is About Stuff/Resources I use.
+System I have 2 Laptops:
+One is old like from 2014. Its a Lenovo IdeaPad G500 series laptop. My linux testing and Other things which I want to try. And You can say like Server stuff, storing Data are done on this laptop. I upgraded it with a 240gb SATA SSD AND it has 8GB Ram. But a Old Dual core processor which is not good for today&amp;rsquo;s world.</description>
+    </item>
+  </channel>
+</rss>

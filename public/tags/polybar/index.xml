@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Polybar on vs206</title>
+    <link>http://localhost:1313/tags/polybar/</link>
+    <description>Recent content in Polybar on vs206</description>
+    <image>
+      <title>vs206</title>
+      <url>http://localhost:1313/images/logo.jpg</url>
+      <link>http://localhost:1313/images/logo.jpg</link>
+    </image>
+    <generator>Hugo -- 0.125.7</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Sep 2023 15:52:24 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/polybar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ebook with Markdown</title>
+      <link>http://localhost:1313/blog/ebookwithmarkdown/</link>
+      <pubDate>Fri, 01 Sep 2023 15:52:24 +0530</pubDate>
+      <guid>http://localhost:1313/blog/ebookwithmarkdown/</guid>
+      <description>Pandoc is a great tool for converting a file in one markup format into another. This means we can use it to convert a file written in Markdown into an EPUB file that is supported by many e-readers.
+Lets start by writting a very simple markdown file called example_ebook.md.
+--- title: - type: main text: Example Ebook - type: subtitle text: An Ebook created from a Markdown file creator: - role: author text: David Sadler publisher: Published by myself --- This is an introduction.</description>
+    </item>
+    <item>
+      <title>BSPWM Setup</title>
+      <link>http://localhost:1313/blog/bspwmsetup/</link>
+      <pubDate>Wed, 05 Jul 2023 15:37:27 +0530</pubDate>
+      <guid>http://localhost:1313/blog/bspwmsetup/</guid>
+      <description>Installing ST, DMENU, and BSPWM Introduction So Let&amp;rsquo;s Start, we will be installing two things. A window system and a layout manager. For this installation I&amp;rsquo;m using Xorg and bspwm. For those who don&amp;rsquo;t know bspwm is tiling window manager for Xorg . we will install st to be our default terminal and also make use of dmenu for launching applications, I will installed both of them in addition to bspwm.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,126 @@
+baseURL: "https://vikalsingh.pages.dev"
+enableRobotsTXT: true
+pygmentsUseClasses: true
+paginate: 10
+theme: PaperMod
+title: "vs206"
+
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+
+
+params:
+  env: production
+  title: vs206
+  description: "Like a chevy in quicksand.."
+  keywords: [Blog, Portfolio, Linux, vs206, personal]
+  #author: vs206
+  images: ["/images/logo.jpg"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: dark # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    #disableHLJS: true # to disable highlight.js
+    #disableFingerprinting: true
+    favicon: "https://raw.githubusercontent.com/rv178/website/main/static/favicon.png"
+    favicon16x16: "https://raw.githubusercontent.com/rv178/website/main/static/favicon.png"
+    favicon32x32: "https://raw.githubusercontent.com/rv178/website/main/static/favicon.png"
+    apple_touch_icon: "https://raw.githubusercontent.com/rv178/website/main/static/favicon.png"
+    safari_pinned_tab: "https://raw.githubusercontent.com/rv178/website/main/static/favicon.png"
+
+  label:
+    text: " "
+   
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    subtitle: "Keeping it simple.."
+    imageUrl: "/images/logo.jpg"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: About Me
+        url: about
+
+  # home-info mode
+  #homeInfoParams:
+  #Title: "Keep it simple, stupid."
+  #Content: Hi there! I'm rv178.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/vs206"
+    - name: youtube
+      url: "https://youtube.com/@Indian-b7b"
+    - name: twitter
+      url: "https://x.com/bookworm"
+    - name: telegram
+      url: "https://t.me/vsisonline"
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: posts
+      name: Blogs
+      url: /blog/
+      weight: 20
+    - identifier: quote
+      name: Quotes
+      url: /quote/
+      weight: 30
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary

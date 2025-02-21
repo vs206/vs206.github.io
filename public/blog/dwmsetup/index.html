@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title> DWM Setup | vs206</title>
+<meta name="keywords" content="dwm, dmenu, st, linux, suckless">
+<meta name="description" content="Installing ST, DMENU and DWM Introduction So Let&rsquo;s Start, we will be require to install two things. A window system of some sort and a layout manager. For this installation I&rsquo;m going with Xorg and dwm. For those that are not aware dwm is dynamic window manager for Xorg that has been developed by Suckless. Since by default dwm expects st to be installed as the system&rsquo;s terminal and also makes use dmenu using which we launch applications I will installed both of them in addition to dwm.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/blog/dwmsetup/">
+<meta name="google-site-verification" content="XYZabc">
+<meta name="yandex-verification" content="XYZabc">
+<meta name="msvalidate.01" content="XYZabc">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://raw.githubusercontent.com/rv178/website/main/static/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/rv178/website/main/static/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/rv178/website/main/static/favicon.png">
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/rv178/website/main/static/favicon.png">
+<link rel="mask-icon" href="https://raw.githubusercontent.com/rv178/website/main/static/favicon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/dwmsetup/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:url" content="http://localhost:1313/blog/dwmsetup/">
+  <meta property="og:site_name" content="vs206">
+  <meta property="og:title" content=" DWM Setup">
+  <meta property="og:description" content="Installing ST, DMENU and DWM Introduction So Let’s Start, we will be require to install two things. A window system of some sort and a layout manager. For this installation I’m going with Xorg and dwm. For those that are not aware dwm is dynamic window manager for Xorg that has been developed by Suckless. Since by default dwm expects st to be installed as the system’s terminal and also makes use dmenu using which we launch applications I will installed both of them in addition to dwm.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2023-07-15T15:37:27+05:30">
+    <meta property="article:modified_time" content="2023-07-15T15:37:27+05:30">
+    <meta property="article:tag" content="Dwm">
+    <meta property="article:tag" content="Dmenu">
+    <meta property="article:tag" content="St">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Suckless">
+      <meta property="og:image" content="http://localhost:1313/images/logo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://localhost:1313/images/logo.jpg">
+<meta name="twitter:title" content=" DWM Setup">
+<meta name="twitter:description" content="Installing ST, DMENU and DWM Introduction So Let&rsquo;s Start, we will be require to install two things. A window system of some sort and a layout manager. For this installation I&rsquo;m going with Xorg and dwm. For those that are not aware dwm is dynamic window manager for Xorg that has been developed by Suckless. Since by default dwm expects st to be installed as the system&rsquo;s terminal and also makes use dmenu using which we launch applications I will installed both of them in addition to dwm.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "http://localhost:1313/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": " DWM Setup",
+      "item": "http://localhost:1313/blog/dwmsetup/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": " DWM Setup",
+  "name": " DWM Setup",
+  "description": "Installing ST, DMENU and DWM Introduction So Let\u0026rsquo;s Start, we will be require to install two things. A window system of some sort and a layout manager. For this installation I\u0026rsquo;m going with Xorg and dwm. For those that are not aware dwm is dynamic window manager for Xorg that has been developed by Suckless. Since by default dwm expects st to be installed as the system\u0026rsquo;s terminal and also makes use dmenu using which we launch applications I will installed both of them in addition to dwm.",
+  "keywords": [
+    "dwm", "dmenu", "st", "linux", "suckless"
+  ],
+  "articleBody": "Installing ST, DMENU and DWM Introduction So Let’s Start, we will be require to install two things. A window system of some sort and a layout manager. For this installation I’m going with Xorg and dwm. For those that are not aware dwm is dynamic window manager for Xorg that has been developed by Suckless. Since by default dwm expects st to be installed as the system’s terminal and also makes use dmenu using which we launch applications I will installed both of them in addition to dwm.\nInstall Dependencies Firt off We need to install the dependencies required by st, dmenu and dwm.\n$ sudo pacman -S base-devel git libx11 libxft xorg-server xorg-xinit libxinerama terminus-font base-devel Since I will be installing from source this package contains various tools to compile software. git Is needed to get the source code from the suckless git repositories. libx11, libxinerama and libxft Dependanices required by dwm otherwise it will fail when trying to compile it. xorg-server Is the display server that provides the windows that dwm will manage. xorg-xinit Allows us to start the display server. terminus-font Dwm is configured to use a monospaced font and since I installed a barebones system I need to install such a font now. $ sudo at install build-essential git libx11-dev libxft-dev xorg libxinerama-dev build-essential Since I will be installing from source this package contains various tools to compile software. git Is needed to get the source code from the suckless git repositories. libx11-dev, libxinerama-dev and libxft-dev Dependanices required by dwm otherwise it will fail when trying to compile it. xorg Is the display server that provides the windows that dwm will manage. xorg-xinit Allows us to start the display server. it is merged in xorg Download Git Repositories The source code for the software is avialable from the Suckless git repositories so I simply clone them.\n$ mkdir suckless $ cd suckless/ $ git clone git://git.suckless.org/st $ git clone git://git.suckless.org/dmenu $ git clone git://git.suckless.org/dwm Install ST I install st by first moving to the directory created when cloning the repository.\n$ cd st Compile and install as usual.\n$ make clean $ sudo make install Install DMENU $ cd dmenu Again compiling and installing is done with the below commands.\n$ make clean $ sudo make install Install DWM $ cd dwm/ Compile and install as usual.\n$ make clean $ sudo make install Starting DWM Since we have installed xorg-xinit I need to create a .xinitrc in my home folder. I am using Neovim Editor, You can use any You Like.\n$ nvim ~/.xinitrc The contents of this file is just.\nexec dwm I can now start xorg and dwm with the below command.\n$ startx Now, We have got our basic minimal dwm setup.\nNote : If you don’t want any mess and don’t have time you can directly go to my GitHub and use the script to install the beautiful Customised dwm with dmenu,st, and other stuff directly with a single command.\nSteps to Install My Configaration $ mkdir suckless $ cd suckless/ $ git clone https://github.com/singh-vikal/harbs $ cd harbs/ $ sudo chmod +x install.sh $ ./install.sh Now Sit Back and Relax. You just have to select Yes at some places and this script will give you a beautiful Dwm setup with dmenu, st, alacritty, slstatus, Brave browser, mpv, audio setup and other daily required packages.\nLinks Dynamic Window Manager (DWM) Suckless Simple Terminal DMenu I don’t have comments as I don’t want to manage them. You can however contact me at the below address if you want to.\nEmail singhvikal891@gmail.com License The contents of this site is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.\nCredit: Harsh/Sei Me =\u003e Return to Homepage\n",
+  "wordCount" : "621",
+  "inLanguage": "en",
+  "image": "http://localhost:1313/images/logo.jpg","datePublished": "2023-07-15T15:37:27+05:30",
+  "dateModified": "2023-07-15T15:37:27+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/blog/dwmsetup/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "vs206",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://raw.githubusercontent.com/rv178/website/main/static/favicon.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="  (Alt + H)"> </a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/blog/" title="Blogs">
+                    <span>Blogs</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/quote/" title="Quotes">
+                    <span>Quotes</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/blog/">Blogs</a></div>
+    <h1 class="post-title entry-hint-parent">
+       DWM Setup
+    </h1>
+    <div class="post-meta"><span title='2023-07-15 15:37:27 +0530 IST'>July 15, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;621 words
+
+</div>
+  </header> 
+  <div class="post-content"><h3 id="installing-st-dmenu-and-dwm">Installing ST, DMENU and DWM<a hidden class="anchor" aria-hidden="true" href="#installing-st-dmenu-and-dwm">#</a></h3>
+<!-- raw HTML omitted -->
+<h3 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h3>
+<p>So Let&rsquo;s Start, we will be require to install two things. A window system of some sort and a layout manager. For this installation I&rsquo;m going with Xorg and dwm. For those that are not aware dwm is dynamic window manager for Xorg that has been developed by Suckless. Since by default dwm expects st to be installed as the system&rsquo;s terminal and also makes use dmenu using which we launch applications I will installed both of them in addition to dwm.</p>
+<h3 id="install-dependencies">Install Dependencies<a hidden class="anchor" aria-hidden="true" href="#install-dependencies">#</a></h3>
+<p>Firt off We need to install the dependencies required by st, dmenu and dwm.</p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ sudo pacman -S base-devel git libx11 libxft xorg-server xorg-xinit libxinerama terminus-font</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li>base-devel Since I will be installing from source this package contains various tools to compile software.</li>
+<li>git Is needed to get the source code from the suckless git repositories.</li>
+<li>libx11, libxinerama and libxft Dependanices required by dwm otherwise it will fail when trying to compile it.</li>
+<li>xorg-server Is the display server that provides the windows that dwm will manage.</li>
+<li>xorg-xinit Allows us to start the display server.</li>
+<li>terminus-font Dwm is configured to use a monospaced font and since I installed a barebones system I need to install such a font now.</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ sudo at install build-essential  git libx11-dev libxft-dev xorg libxinerama-dev</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li>build-essential Since I will be installing from source this package contains various tools to compile software.</li>
+<li>git Is needed to get the source code from the suckless git repositories.</li>
+<li>libx11-dev, libxinerama-dev and libxft-dev Dependanices required by dwm otherwise it will fail when trying to compile it.</li>
+<li>xorg Is the display server that provides the windows that dwm will manage.</li>
+<li>xorg-xinit Allows us to start the display server. it is merged in xorg</li>
+</ul>
+<h4 id="download-git-repositories">Download Git Repositories<a hidden class="anchor" aria-hidden="true" href="#download-git-repositories">#</a></h4>
+<p>The source code for the software is avialable from the Suckless git repositories so I simply clone them.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ mkdir suckless </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ cd suckless/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ git clone git://git.suckless.org/st </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ git clone git://git.suckless.org/dmenu</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ git clone git://git.suckless.org/dwm </span><span class="w">
+</span></span></span></code></pre></div><h4 id="install-st">Install ST<a hidden class="anchor" aria-hidden="true" href="#install-st">#</a></h4>
+<p>I install st by first moving to the directory created when cloning the repository.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ cd st</span><span class="w">
+</span></span></span></code></pre></div><p>Compile and install as usual.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ make clean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ sudo make install</span><span class="w">
+</span></span></span></code></pre></div><h4 id="install-dmenu">Install DMENU<a hidden class="anchor" aria-hidden="true" href="#install-dmenu">#</a></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ cd dmenu</span><span class="w">
+</span></span></span></code></pre></div><p>Again compiling and installing is done with the below commands.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ make clean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ sudo make install</span><span class="w">
+</span></span></span></code></pre></div><h4 id="install-dwm">Install DWM<a hidden class="anchor" aria-hidden="true" href="#install-dwm">#</a></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ cd dwm/</span><span class="w">
+</span></span></span></code></pre></div><p>Compile and install as usual.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ make clean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ sudo make install</span><span class="w">
+</span></span></span></code></pre></div><h4 id="starting-dwm">Starting DWM<a hidden class="anchor" aria-hidden="true" href="#starting-dwm">#</a></h4>
+<p>Since we have installed xorg-xinit I need to create a .xinitrc in my home folder. I am using <a href="https://neovim.io/">Neovim</a> Editor, You can use any You Like.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ nvim ~/.xinitrc</span><span class="w">
+</span></span></span></code></pre></div><p>The contents of this file is just.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">exec dwm</span><span class="w">
+</span></span></span></code></pre></div><p>I can now start xorg and dwm with the below command.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ startx</span><span class="w">
+</span></span></span></code></pre></div><p>Now, We have got our basic minimal dwm setup.</p>
+<!-- raw HTML omitted -->
+<p>Note : If you don&rsquo;t want any mess and don&rsquo;t have time you can directly go to my <a href="https://github.com/singh-vikal/harbs">GitHub</a> and use the script to install the beautiful Customised dwm with dmenu,st, and other stuff directly with a single command.</p>
+<!-- raw HTML omitted -->
+<h4 id="steps-to-install-my-configaration">Steps to Install My Configaration<a hidden class="anchor" aria-hidden="true" href="#steps-to-install-my-configaration">#</a></h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">$ mkdir suckless </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ cd suckless/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ git clone https://github.com/singh-vikal/harbs</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ cd harbs/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ sudo chmod +x install.sh</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">$ ./install.sh</span><span class="w">
+</span></span></span></code></pre></div><p>Now Sit Back and Relax.
+You just have to select <strong>Yes</strong> at some places and this script will give you a beautiful <strong>Dwm</strong> setup with <strong>dmenu, st, alacritty, slstatus, Brave browser, mpv, audio setup</strong> and other daily required packages.</p>
+<h4 id="links">Links<a hidden class="anchor" aria-hidden="true" href="#links">#</a></h4>
+<ul>
+<li><a href="https://dwm.suckless.org/">Dynamic Window Manager (DWM)</a></li>
+<li><a href="https://suckless.org/">Suckless</a></li>
+<li><a href="https://st.suckless.org/">Simple Terminal</a></li>
+<li><a href="https://tools.suckless.org/dmenu/">DMenu</a></li>
+</ul>
+<p>I don&rsquo;t have comments as I don&rsquo;t want to manage them. You can however contact me at the below address if you want to.</p>
+<ul>
+<li><a href="mailto:singhvikal891@gmail.com"> Email singhvikal891@gmail.com</a></li>
+</ul>
+<h4 id="license">License<a hidden class="anchor" aria-hidden="true" href="#license">#</a></h4>
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/">The contents of this site is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</a></p>
+<h4 id="credit">Credit:<a hidden class="anchor" aria-hidden="true" href="#credit">#</a></h4>
+<ul>
+<li><a href="https://github.com/seicq">Harsh/Sei</a></li>
+<li><a href="https://github.com/vikmenace">Me</a></li>
+</ul>
+<p><a href="https://vikmenace.github.io">=&gt; Return to Homepage</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/dwm/">Dwm</a></li>
+      <li><a href="http://localhost:1313/tags/dmenu/">Dmenu</a></li>
+      <li><a href="http://localhost:1313/tags/st/">St</a></li>
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:1313/tags/suckless/">Suckless</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/blog/socialmedia/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Dark Side of Social Media</span>
+  </a>
+  <a class="next" href="http://localhost:1313/blog/bspwmsetup/">
+    <span class="title">Next »</span>
+    <br>
+    <span>BSPWM Setup</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">vs206</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
