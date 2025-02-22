@@ -1,4 +1,4 @@
-baseURL: "https://vikalsingh.pages.dev"
+baseURL: "https://vs206.is-a.dev"
 enableRobotsTXT: true
 pygmentsUseClasses: true
 paginate: 10
@@ -22,7 +22,7 @@ params:
   description: "Like a chevy in quicksand.."
   keywords: [Blog, Portfolio, Linux, vs206, personal]
   #author: vs206
-  images: ["/images/logo.jpg"]
+  images: ["https://github.com/vs206/vs206.github.io/blob/main/static/images/logo.jpg"]
   DateFormat: "January 2, 2006"
   defaultTheme: dark # dark, light
   disableThemeToggle: false
@@ -46,11 +46,11 @@ params:
   assets:
     #disableHLJS: true # to disable highlight.js
     #disableFingerprinting: true
-    favicon: "https://raw.githubusercontent.com/rv178/website/main/static/favicon.png"
-    favicon16x16: "https://raw.githubusercontent.com/rv178/website/main/static/favicon.png"
-    favicon32x32: "https://raw.githubusercontent.com/rv178/website/main/static/favicon.png"
-    apple_touch_icon: "https://raw.githubusercontent.com/rv178/website/main/static/favicon.png"
-    safari_pinned_tab: "https://raw.githubusercontent.com/rv178/website/main/static/favicon.png"
+    favicon: "https://raw.githubusercontent.com/vs206/vs206.github.io/refs/heads/main/static/images/logo.jpg"
+    favicon16x16: "https://raw.githubusercontent.com/vs206/vs206.github.io/refs/heads/main/static/images/logo.jpg"
+    favicon32x32: "https://raw.githubusercontent.com/vs206/vs206.github.io/refs/heads/main/static/images/logo.jpg"
+    apple_touch_icon: "https://raw.githubusercontent.com/vs206/vs206.github.io/refs/heads/main/static/images/logo.jpg"
+    safari_pinned_tab: "https://raw.githubusercontent.com/vs206/vs206.github.io/refs/heads/main/static/images/logo.jpg"
 
   label:
     text: " "
@@ -76,7 +76,7 @@ params:
     - name: github
       url: "https://github.com/vs206"
     - name: youtube
-      url: "https://youtube.com/@Indian-b7b"
+      url: "https://www.youtube.com/@its_vs206"
     - name: twitter
       url: "https://x.com/bookworm"
     - name: telegram
