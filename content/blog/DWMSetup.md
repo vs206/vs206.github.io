@@ -142,9 +142,6 @@ You just have to select **Yes** at some places and this script will give you a b
  - [Simple Terminal](https://st.suckless.org/)
  - [DMenu](https://tools.suckless.org/dmenu/)
 
-I don't have comments as I don't want to manage them. You can however contact me at the below address if you want to.
-
- - [ Email singhvikal891@gmail.com](mailto:singhvikal891@gmail.com)
 
 
 
@@ -158,4 +155,4 @@ I don't have comments as I don't want to manage them. You can however contact me
  - [Me](https://github.com/vikmenace)
 
 
-[=> Return to Homepage](https://vikmenace.github.io)
+

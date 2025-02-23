@@ -305,14 +305,10 @@ It Will look similar to image on the top of this article.
  - [DMenu](https://tools.suckless.org/dmenu/)
 
 
-I don't have comments as I don't want to manage them. You can however contact me at the below address if you want to.
-
- - [ Email singhvikal891@gmail.com](mailto:singhvikal891@gmail.com)
-
 
 
 #### License 
 
 [The contents of this site is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.](https://creativecommons.org/licenses/by-sa/4.0/)
 
-[=> Return to Homepage](https://vikmenace.github.io)
+

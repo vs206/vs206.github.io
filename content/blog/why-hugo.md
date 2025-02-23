@@ -68,10 +68,6 @@ Creating this website with Hugo was a fun and rewarding experience. I learned a 
 Having set up my site now I can't wait to post more blogs. See you there.
 
 
-#### Links
-I don't have comments as I don't want to manage them. You can however contact me at the below address if you want to.
-
- - [Email singhvikal891@gmail.com](mailto:singhvikal891@gmail.com)
 
 
 
@@ -79,4 +75,4 @@ I don't have comments as I don't want to manage them. You can however contact me
 
 [The contents of this site is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.](https://creativecommons.org/licenses/by-sa/4.0/)
 
-[=> Return to Homepage](https://vikmenace.github.io)
+
