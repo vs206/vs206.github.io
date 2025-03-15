@@ -80,7 +80,7 @@ params:
     - name: twitter
       url: "https://x.com/its_vs206"
     - name: telegram
-      url: "https://t.me/vsisonline"
+      url: "https://t.me/vsisoffline"
 
   analytics:
     google:
