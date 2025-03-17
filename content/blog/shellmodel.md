@@ -13,10 +13,7 @@ featuredImage: ""
 disableComments: true
 draft: false
 ---
-
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
-# 
+ 
 
 ---
 
@@ -38,12 +35,14 @@ Nuclei with fully filled proton or neutron shells exhibit exceptional stability,
 
 Each nucleon occupies a unique quantum state defined by quantum numbers ($$n, l, j, m_j$$). Filled shells have total angular momentum $$J = 0$$, while valence nucleons (outermost shell) determine the nucleus's spin and parity.
 3. **Energy Levels and Transitions**
-    - Nucleons populate quantized energy levels, with promotion to higher shells causing excited states. For instance, $$^{12}\text{C}$$’s ground state has two filled shells, but exciting a nucleon to the third shell creates a 15.1 MeV state.
+    - Nucleons populate quantized energy levels, with promotion to higher shells causing excited states. For instance, $$^{12}\text{C}$$ ’s ground state has two filled shells, but exciting a nucleon to the third shell creates a 15.1 MeV state.
     - Excited states decay via gamma emission or beta decay (e.g., $$^{12}\text{B} \rightarrow ^{12}\text{C} + e^-$$ and $$^{12}\text{N} \rightarrow ^{12}\text{C} + e^+$$).
 
 ## Applications and Limitations
 
-- **Predictive Power**: The model accurately calculates spin, parity, and transition probabilities for nuclei near magic numbers. For example, it explains $$^{12}\text{C}$$’s decay pathways and angular momentum changes during nucleon excitation.
+- **Predictive Power**: The model accurately calculates spin, parity, and transition probabilities for nuclei near magic numbers. 
+
+        For example, it explains $$^{12}\text{C}$$ ’s decay pathways and angular momentum changes during nucleon excitation.
 - **Limitations**: The model struggles with unstable nuclei far from magic numbers, where collective motion (e.g., liquid-drop or collective models) becomes relevant.
 
 
