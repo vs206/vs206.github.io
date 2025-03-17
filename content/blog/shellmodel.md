@@ -1,6 +1,6 @@
 ---
 title: 'Nuclear Shell Model'
-date: 2025-03-017T15:52:24+05:30
+date: 2025-03-17T15:52:24+05:30
 authors: ["Vikal Singh"]
 description: ""
 tags: ["physics","nuclear","shell","model","nuclear physics"]
