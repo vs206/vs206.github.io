@@ -106,18 +106,14 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: about
-      name: About
-      url: /about/
-      weight: 10
     - identifier: posts
       name: Blogs
       url: /blog/
-      weight: 20
+      weight: 10
     - identifier: quote
       name: Quotes
       url: /quote/
-      weight: 30
+      weight: 20
 
 outputs:
   home:
