@@ -106,9 +106,9 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: home
-      name: Home
-      url: /
+    - identifier: about
+      name: About
+      url: /about/
       weight: 10
     - identifier: posts
       name: Blogs
