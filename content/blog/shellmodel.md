@@ -17,7 +17,6 @@ draft: false
 
 ---
 
-# tell me about nuclear shell model in detail
 
 The nuclear shell model is a fundamental theory in nuclear physics that explains the structure and stability of atomic nuclei by describing the arrangement of nucleons (protons and neutrons) in discrete energy levels or "shells." This model, analogous to the electron shell model in atomic physics, accounts for observed nuclear properties like magic numbers, angular momentum, and decay patterns.
 
@@ -31,9 +30,13 @@ Proposed independently by **Maria Goeppert Mayer** and **J. Hans D. Jensen** in 
 Nuclei with fully filled proton or neutron shells exhibit exceptional stability, termed "magic numbers": **2, 8, 20, 28, 50, 82, 126**. For example:
     - $$^{116}\text{Sn}$$ (50 protons) and $$^{54}\text{Fe}$$ (28 neutrons) have magic proton/neutron counts.
     - Doubly magic nuclei like $$^{40}\text{Ca}$$ (20 protons, 20 neutrons) and $$^{208}\text{Pb}$$ (82 protons, 126 neutrons) are exceptionally stable.
+
+
 2. **Pauli Exclusion Principle**
 
 Each nucleon occupies a unique quantum state defined by quantum numbers ($$n, l, j, m_j$$). Filled shells have total angular momentum $$J = 0$$, while valence nucleons (outermost shell) determine the nucleus's spin and parity.
+
+
 3. **Energy Levels and Transitions**
     - Nucleons populate quantized energy levels, with promotion to higher shells causing excited states. For instance, $$^{12}\text{C}$$ ’s ground state has two filled shells, but exciting a nucleon to the third shell creates a 15.1 MeV state.
     - Excited states decay via gamma emission or beta decay (e.g., $$^{12}\text{B} \rightarrow ^{12}\text{C} + e^-$$ and $$^{12}\text{N} \rightarrow ^{12}\text{C} + e^+$$).
